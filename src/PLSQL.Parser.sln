@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PLSQL.Parser", "PLSQL.Parser\PLSQL.Parser.csproj", "{D59EFC08-3C63-4854-BEE3-88D3EC16B86E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PLSQL.Parser", "PLSQL.Parser\PLSQL.Parser.csproj", "{45D6A5E0-3A60-4060-BCA0-F38431F1E266}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{D59EFC08-3C63-4854-BEE3-88D3EC16B86E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D59EFC08-3C63-4854-BEE3-88D3EC16B86E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D59EFC08-3C63-4854-BEE3-88D3EC16B86E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D59EFC08-3C63-4854-BEE3-88D3EC16B86E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{45D6A5E0-3A60-4060-BCA0-F38431F1E266}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45D6A5E0-3A60-4060-BCA0-F38431F1E266}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45D6A5E0-3A60-4060-BCA0-F38431F1E266}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45D6A5E0-3A60-4060-BCA0-F38431F1E266}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

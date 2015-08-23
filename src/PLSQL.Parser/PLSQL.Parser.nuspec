@@ -13,10 +13,12 @@
     <releaseNotes>Inital Package</releaseNotes>
     <copyright>Copyright 2015 Richard Simpson</copyright>
     <tags>PLSQL, parser</tags>
+    <dependencies>
+      <dependency  id="Antlr4" version="[4.3.0,5.0.0)" />
+    </dependencies>
   </metadata>
-  <!-- The convention for analyzers is to put language agnostic dlls in analyzers\dotnet and language specific analyzers in either analyzers\dotnet\cs or analyzers\dotnet\vb -->
   <files>
-    <file src="*.dll" target="analyzers\dotnet\cs" />
-    <file src="*.xml" target="analyzers\dotnet\cs" />
+    <file src="*.dll" target="netcore45/lib" exclude="Antlr4*" />
+    <file src="*.xml" target="netcore45/lib" />
   </files>
 </package>
