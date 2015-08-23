@@ -1,0 +1,22 @@
+﻿<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>PLSQL.Parser</id>
+    <version>0.1.0</version>
+    <title>PLSQL Parser</title>
+    <authors>Richard Simpson</authors>
+    <owners>Richard Simpson</owners>
+    <licenseUrl>https://github.com/RichiCoder1/PLSQL.Parser/blob/master/LICENSE.txt</licenseUrl>
+    <projectUrl>https://github.com/RichiCoder1/PLSQL.Parser</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>PLSQL Parser generated through an Antlr4 g4.</description>
+    <releaseNotes>Inital Package</releaseNotes>
+    <copyright>Copyright 2015 Richard Simpson</copyright>
+    <tags>PLSQL, parser</tags>
+  </metadata>
+  <!-- The convention for analyzers is to put language agnostic dlls in analyzers\dotnet and language specific analyzers in either analyzers\dotnet\cs or analyzers\dotnet\vb -->
+  <files>
+    <file src="*.dll" target="analyzers\dotnet\cs" />
+    <file src="*.xml" target="analyzers\dotnet\cs" />
+  </files>
+</package>
