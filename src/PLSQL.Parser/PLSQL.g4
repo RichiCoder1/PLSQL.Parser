@@ -313,34 +313,34 @@ conflict_clause
     OR
 */
 expr
- : literal_value
- | BIND_PARAMETER
- | ( ( database_name '.' )? table_name '.' )? column_name
- | unary_operator expr
- | expr '||' expr
- | expr ( '*' | '/' | '%' ) expr
- | expr ( '+' | '-' ) expr
- | expr ( '<<' | '>>' | '&' | '|' ) expr
- | expr ( '<' | '<=' | '>' | '>=' ) expr
- | expr ( '=' | '==' | '!=' | '<>' | K_IS | K_IS K_NOT | K_IN | K_LIKE | K_GLOB | K_MATCH | K_REGEXP ) expr
- | expr K_AND expr
- | expr K_OR expr
- | function_name '(' ( K_DISTINCT? expr ( ',' expr )* | '*' )? ')'
- | '(' expr ')'
- | K_CAST '(' expr K_AS type_name ')'
- | expr K_COLLATE collation_name
- | expr K_NOT? ( K_LIKE | K_GLOB | K_REGEXP | K_MATCH ) expr ( K_ESCAPE expr )?
- | expr ( K_ISNULL | K_NOTNULL | K_NOT K_NULL )
- | expr K_IS K_NOT? expr
- | expr K_NOT? K_BETWEEN expr K_AND expr
+ : literal_value # LiteralExpr
+ | BIND_PARAMETER # BindExpr
+ | ( ( database_name '.' )? table_name '.' )? column_name # Column
+ | unary_operator expr # Unary
+ | expr '||' expr # Or
+ | expr ( '*' | '/' | '%' ) expr # MulDivRemainer
+ | expr ( '+' | '-' ) expr # AddSub
+ | expr ( '<<' | '>>' | '&' | '|' ) expr # BitWise
+ | expr ( '<' | '<=' | '>' | '>=' ) expr # Compare
+ | expr ( '=' | '==' | '!=' | '<>' | K_IS | K_IS K_NOT | K_IN | K_LIKE | K_GLOB | K_MATCH | K_REGEXP ) expr # EqualMatch
+ | expr K_AND expr # AndKeyword
+ | expr K_OR expr # OrKeyword
+ | function_name '(' ( K_DISTINCT? expr ( ',' expr )* | '*' )? ')' # Function
+ | '(' expr ')' # Group
+ | K_CAST '(' expr K_AS type_name ')' # Cast
+ | expr K_COLLATE collation_name # Collate
+ | expr K_NOT? ( K_LIKE | K_GLOB | K_REGEXP | K_MATCH ) expr ( K_ESCAPE expr )? # Not
+ | expr ( K_ISNULL | K_NOTNULL | K_NOT K_NULL ) # Null
+ | expr K_IS K_NOT? expr # Is
+ | expr K_NOT? K_BETWEEN expr K_AND expr # Between
  | expr K_NOT? K_IN ( '(' ( select_stmt
                           | expr ( ',' expr )*
                           )? 
                       ')'
-                    | ( database_name '.' )? table_name )
- | ( ( K_NOT )? K_EXISTS )? '(' select_stmt ')'
- | K_CASE expr? ( K_WHEN expr K_THEN expr )+ ( K_ELSE expr )? K_END
- | raise_function
+                    | ( database_name '.' )? table_name ) # InCollection
+ | ( ( K_NOT )? K_EXISTS )? '(' select_stmt ')' # Select
+ | K_CASE expr? ( K_WHEN expr K_THEN expr )+ ( K_ELSE expr )? K_END # Case
+ | raise_function # Raise
  ;
 
 foreign_key_clause

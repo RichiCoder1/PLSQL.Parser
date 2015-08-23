@@ -18,9 +18,7 @@
     </dependencies>
   </metadata>
   <files>
-    <file src="*.dll" target="portable45-net45+win8/lib" exclude="Antlr4*" />
-    <file src="*.xml" target="portable45-net45+win8/lib" />
-    <file src="*.dll" target="netcore45/lib" exclude="Antlr4*" />
-    <file src="*.xml" target="netcore45/lib" />
+    <file src="*.dll" target="lib/portable45-net45+win8" exclude="Antlr4*" />
+    <file src="*.xml" target="lib/portable45-net45+win8" exclude="Antlr4*" />
   </files>
 </package>
